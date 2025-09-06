@@ -1,0 +1,19 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "blog": "Blog",
+    "contact": "Contact",
+    "logo": "nextStepLogoLighter.svg"
+  },
+  "hero": {
+    "title": "MAKE YOUR NEXT STEP",
+    "subtitle": "Your Global Education Journey Starts Here\nWe guide students to top universities abroad — from applications to visas, scholarships to settling in.",
+    "cta": "Book Free Consultation",
+    "rating": "★★★★★ 4.9/5 from 2,300+ students & parents"
+  },
+  "footer": {
+    "rights": "© 2025 GlobEd Consultants. All rights reserved."
+  }
+}

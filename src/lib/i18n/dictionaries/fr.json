@@ -1,0 +1,19 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "blog": "Blog",
+    "contact": "Contact",
+    "logo": "nextStepLogoLighter.svg"
+  },
+  "hero": {
+    "title": "FAITES VOTRE PROCHAIN PAS",
+    "subtitle": "Votre parcours éducatif mondial commence ici\nNous accompagnons les étudiants vers les meilleures universités à l’étranger — de la candidature au visa, des bourses à l’installation sur place.",
+    "cta": "Réservez une consultation gratuite",
+    "rating": "★★★★★ 4,9/5 par plus de 2 300 étudiants et parents"
+  },
+  "footer": {
+    "rights": "© 2025 GlobEd Consultants. Tous droits réservés."
+  }
+}
