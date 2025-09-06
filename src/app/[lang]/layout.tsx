@@ -17,7 +17,7 @@ export default async function LocaleLayout({
     const { lang } = await params;
 
     // Validate lang
-    if (!locales.includes(lang as any)) {
+    if (!locales.includes(lang as (typeof locales)[number])) {
         return <div>Language not supported</div>;
     }
 

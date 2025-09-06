@@ -36,7 +36,7 @@ function getLocale(request: NextRequest): string {
         const languages = acceptLanguage.split(',').map((lang) => lang.split(';')[0]);
         for (const lang of languages) {
             const code = lang.split('-')[0]; // 'en-US' → 'en'
-            if (locales.includes(code as any)) {
+            if (locales.includes(code as (typeof locales)[number])) {
                 return code;
             }
         }

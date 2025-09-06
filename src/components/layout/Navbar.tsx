@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Phone, Search, Menu, X } from 'lucide-react';
 import LanguageSwitcher from "@/components/common/LanguageSwitcher";
+import Image from "next/image";
 
 interface NavbarProps {
     dictionary: {
@@ -41,7 +42,7 @@ export default function Navbar({ dictionary, currentLang }: NavbarProps) {
                         {/* Logo */}
                         <div className="flex-shrink-0 flex items-center">
                             <Link href={`/${currentLang}`} className="flex items-center">
-                                <img
+                                <Image
                                     src={`/${dictionary.logo}`}
                                     alt="Make Your Next Step Logo"
                                     height="100"

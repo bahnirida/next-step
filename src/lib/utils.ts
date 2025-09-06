@@ -10,7 +10,7 @@ export async function getDictionary(locale: string) {
     try {
         return await import(`@/lib/i18n/dictionaries/${locale}.json`)
             .then((module) => module.default);
-    } catch (e) {
+    } catch (_e) {
         console.warn(`Missing dictionary for: ${locale}`);
         return {};
     }
