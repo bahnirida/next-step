@@ -41,27 +41,32 @@
     ]
   },
   "contact": {
-    "metaTitle": "Contactez-nous - Make Your Next Step",
-    "metaDescription": "Contactez nos conseillers en études à l'étranger pour un accompagnement personnalisé.",
     "title": "Contactez-nous",
-    "subtitle": "Des questions ? Nos conseillers experts sont là pour vous accompagner à chaque étape.",
-    "formTitle": "Envoyez-nous un message",
-    "successMessage": "Merci ! Nous vous répondrons dans les 24 heures.",
-    "nameLabel": "Nom complet",
-    "namePlaceholder": "Entrez votre nom complet",
-    "emailLabel": "Adresse e-mail",
-    "emailPlaceholder": "vous@exemple.com",
-    "phoneLabel": "Numéro de téléphone (Optionnel)",
-    "phonePlaceholder": "+33 (0)1 23 45 67 89",
-    "messageLabel": "Comment pouvons-nous vous aider ?",
-    "messagePlaceholder": "Parlez-nous de vos objectifs d'études à l'étranger...",
-    "submitButton": "Envoyer le message",
-    "infoTitle": "Coordonnées",
-    "phoneTitle": "Téléphone",
-    "emailTitle": "Email",
-    "addressTitle": "Adresse",
-    "hoursTitle": "Heures d'ouverture",
-    "hoursText": "Lundi - Vendredi : 9h - 18h (heure de Paris)\nSamedi : 10h - 16h (heure de Paris)\nDimanche : Fermé"
+    "subtitle": "Des questions ? Nous sommes là pour vous aider à chaque étape.",
+    "form": {
+      "nameLabel": "Nom complet",
+      "namePlaceholder": "Entrez votre nom complet",
+      "emailLabel": "Adresse e-mail",
+      "emailPlaceholder": "vous@exemple.com",
+      "messageLabel": "Votre message",
+      "messagePlaceholder": "Dites-nous comment nous pouvons vous aider...",
+      "submitButton": "Envoyer le message",
+      "successMessage": "Merci ! Nous vous répondrons dans les 24 heures."
+    },
+    "info": {
+      "phoneTitle": "Téléphone",
+      "phone": "+33 (0)1 23 45 67 89",
+      "emailTitle": "Email",
+      "email": "info@makeyournextstep.com",
+      "addressTitle": "Adresse",
+      "address": "123 Rue de l'Éducation, Paris, 75001, France",
+      "hoursTitle": "Heures d'ouverture",
+      "hours": "Lundi - Vendredi : 9h - 18h (heure de Paris)\nSamedi : 10h - 16h (heure de Paris)\nDimanche : Fermé"
+    },
+    "cta": {
+      "text": "Réserver une Consultation Gratuite",
+      "link": "/contact"
+    }
   },
   "footer": {
     "quickLinks": {
@@ -160,6 +165,72 @@
     ],
     "cta": {
       "text": "Commencez votre parcours →",
+      "link": "/contact"
+    }
+  },
+  "team": {
+    "title": "Voici Notre Équipe de Soutien à l'Immigration",
+    "subtitle": "Découvrez les experts qui guident votre parcours vers le succès.",
+    "team": [
+      {
+        "id": 1,
+        "name": "Amina El Fassi",
+        "role": "Conseillère en Immigration",
+        "bio": "Plus de 10 ans d'expérience dans l'aide aux étudiants marocains pour étudier et travailler à l'étranger. Spécialisée dans les visas Canada et France.",
+        "photo": "amina.png"
+      },
+      {
+        "id": 2,
+        "name": "Youssef Benali",
+        "role": "Conseiller Étudiant",
+        "bio": "Ancien étudiant international en Allemagne. Aide aux candidatures universitaires et à la recherche de bourses.",
+        "photo": "youssef.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Fatima Zahraoui",
+        "role": "Spécialiste des Visas",
+        "bio": "Experte en visas de travail aux Émirats et dans la région du Golfe. Aide au placement professionnel et aux permis de résidence.",
+        "photo": "fatima.png"
+      }
+    ],
+    "stats": {
+      "students": "5 000+",
+      "successRate": "98 %",
+      "countries": "50+"
+    },
+    "cta": {
+      "text": "Réserver une Consultation Gratuite",
+      "link": "/contact"
+    }
+  },
+  "journey": {
+    "title": "Votre Parcours vers le Succès",
+    "subtitle": "Nous vous guidons à chaque étape",
+    "steps": [
+      {
+        "id": 1,
+        "title": "Soutien aux Candidatures",
+        "description": "Nous vous aidons à choisir la bonne université et à préparer votre candidature."
+      },
+      {
+        "id": 2,
+        "title": "Aide aux Visas",
+        "description": "Conseils d'experts pour naviguer les exigences de visa et éviter les pièges courants."
+      },
+      {
+        "id": 3,
+        "title": "Préparation Avant le Départ",
+        "description": "Orientation culturelle et aide au logement pour se préparer à la vie à l'étranger."
+      },
+      {
+        "id": 4,
+        "title": "Arrivée & Soutien",
+        "description": "Nous sommes avec vous à l'arrivée pour vous aider à vous installer et réussir."
+      }
+    ],
+    "cta": {
+      "text": "Commencer votre parcours",
       "link": "/contact"
     }
   }

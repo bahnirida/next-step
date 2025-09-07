@@ -47,9 +47,9 @@ export default function Navbar({ dictionary, currentLang }: NavbarProps) {
                                 <Image
                                     src={`/${dictionary.logo}`}
                                     alt="Make Your Next Step Logo"
-                                    height="100"
-                                    width="140"
-                                    className="h-16 w-auto object-contain"
+                                    height="60"
+                                    width="80"
+                                    className="h-12 w-auto object-contain"
                                 />
                             </Link>
                         </div>

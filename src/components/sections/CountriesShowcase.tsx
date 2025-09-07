@@ -64,7 +64,16 @@ export default function CountriesShowcase({ dictionary, currentLang }: Countries
     );
 
     return (
-        <section className="py-24 bg-gradient-to-br from-primary-50 to-secondary-50 overflow-hidden">
+        <section className="relative py-24 bg-gradient-to-br from-primary-50 to-secondary-50 overflow-hidden">
+            <div className="absolute top-3 right-0 hidden md:block ">
+                <Image
+                    src="/illustrations/flightLignes-9.svg"
+                    alt="Flight path from home to destination"
+                    width={300}
+                    height={150}
+                    className="w-96 h-auto opacity-30 transform"
+                />
+            </div>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
                 <div className="text-center mb-16">

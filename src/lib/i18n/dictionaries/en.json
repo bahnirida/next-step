@@ -41,27 +41,32 @@
     ]
   },
   "contact": {
-    "metaTitle": "Contact Us - Make Your Next Step",
-    "metaDescription": "Get in touch with our study abroad consultants for personalized guidance.",
-    "title": "Contact Us",
-    "subtitle": "Have questions? Our expert consultants are here to help you every step of the way.",
-    "formTitle": "Send Us a Message",
-    "successMessage": "Thank you! We'll get back to you within 24 hours.",
-    "nameLabel": "Full Name",
-    "namePlaceholder": "Enter your full name",
-    "emailLabel": "Email Address",
-    "emailPlaceholder": "you@example.com",
-    "phoneLabel": "Phone Number (Optional)",
-    "phonePlaceholder": "+1 (555) 123-4567",
-    "messageLabel": "How can we help you?",
-    "messagePlaceholder": "Tell us about your study abroad goals...",
-    "submitButton": "Send Message",
-    "infoTitle": "Contact Information",
-    "phoneTitle": "Phone",
-    "emailTitle": "Email",
-    "addressTitle": "Address",
-    "hoursTitle": "Office Hours",
-    "hoursText": "Monday - Friday: 9am - 6pm EST\nSaturday: 10am - 4pm EST\nSunday: Closed"
+    "title": "Let's Contact with Us",
+    "subtitle": "Have questions? We're here to help you every step of the way.",
+    "form": {
+      "nameLabel": "Full Name",
+      "namePlaceholder": "Enter your full name",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "you@example.com",
+      "messageLabel": "Your Message",
+      "messagePlaceholder": "Tell us how we can help you...",
+      "submitButton": "Send Message",
+      "successMessage": "Thank you! We'll get back to you within 24 hours."
+    },
+    "info": {
+      "phoneTitle": "Phone",
+      "phone": "+1 (800) STUDY-NOW",
+      "emailTitle": "Email",
+      "email": "info@makeyournextstep.com",
+      "addressTitle": "Address",
+      "address": "123 Education Street, New York, NY 10001, United States",
+      "hoursTitle": "Office Hours",
+      "hours": "Monday - Friday: 9am - 6pm EST\nSaturday: 10am - 4pm EST\nSunday: Closed"
+    },
+    "cta": {
+      "text": "Book Free Consultation",
+      "link": "/contact"
+    }
   },
   "footer": {
     "quickLinks": {
@@ -160,6 +165,72 @@
     ],
     "cta": {
       "text": "Start Your Journey →",
+      "link": "/contact"
+    }
+  },
+  "team": {
+    "title": "Here's Our Immigration Support Team",
+    "subtitle": "Meet the experts guiding your journey to success.",
+    "team": [
+      {
+        "id": 1,
+        "name": "Amina El Fassi",
+        "role": "Immigration Consultant",
+        "bio": "10+ years helping Moroccan students study and work abroad. Specializes in Canada and France visas.",
+        "photo": "amina.png"
+      },
+      {
+        "id": 2,
+        "name": "Youssef Benali",
+        "role": "Student Advisor",
+        "bio": "Former international student in Germany. Helps with university applications and scholarship searches.",
+        "photo": "youssef.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Fatima Zahraoui",
+        "role": "Visa Specialist",
+        "bio": "Expert in UAE and Gulf region work visas. Assists with job placement and residency permits.",
+        "photo": "fatima.png"
+      }
+    ],
+    "stats": {
+      "students": "5,000+",
+      "successRate": "98%",
+      "countries": "50+"
+    },
+    "cta": {
+      "text": "Book Free Consultation",
+      "link": "/contact"
+    }
+  },
+  "journey": {
+    "title": "Your Journey to Success",
+    "subtitle": "We guide you every step of the way",
+    "steps": [
+      {
+        "id": 1,
+        "title": "Application Support",
+        "description": "We help you choose the right university and prepare your application."
+      },
+      {
+        "id": 2,
+        "title": "Visa Assistance",
+        "description": "Expert guidance to navigate visa requirements and avoid common pitfalls."
+      },
+      {
+        "id": 3,
+        "title": "Pre-Departure Prep",
+        "description": "Cultural orientation and accommodation help to prepare for life abroad."
+      },
+      {
+        "id": 4,
+        "title": "Arrival & Support",
+        "description": "We're with you on arrival to help you settle in and succeed."
+      }
+    ],
+    "cta": {
+      "text": "Start Your Journey",
       "link": "/contact"
     }
   }

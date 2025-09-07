@@ -51,7 +51,7 @@ export default function ServicesShowcase({ dictionary, currentLang }: ServicesSh
                         alt="Flight path from home to destination"
                         width={300}
                         height={150}
-                        className="w-72 h-auto opacity-30 transform"
+                        className="w-56 h-auto opacity-30 transform"
                     />
                 </div>
                 <div className="text-center mb-16">

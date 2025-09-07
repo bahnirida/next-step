@@ -4,6 +4,9 @@ import Hero from '@/components/sections/Hero';
 import Footer from "@/components/layout/Footer";
 import ServicesShowcase from "@/components/sections/ServicesShowcase";
 import CountriesShowcase from "@/components/sections/CountriesShowcase";
+import TeamShowcase from "@/components/sections/TeamShowcase";
+import ContactSection from "@/components/sections/ContactSection";
+import JourneySteps from "@/components/sections/JourneySteps";
 
 export default async function HomePage({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;
@@ -24,6 +27,9 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
             />
             <ServicesShowcase dictionary={dictionary.services} currentLang={lang}/>
             <CountriesShowcase dictionary={dictionary.countries} currentLang={lang}/>
+            {/*<JourneySteps dictionary={dictionary.journey} currentLang={lang}/>*/}
+            <TeamShowcase dictionary={dictionary.team} currentLang={lang}/>
+            <ContactSection dictionary={dictionary.contact} currentLang={lang}/>
             {/* Add other sections here */}
             <Footer
                 dictionary={dictionary.footer}

@@ -3,6 +3,7 @@ import { ReactNode } from 'react';
 import Navbar from '@/components/layout/Navbar';
 import { getDictionary } from '@/lib/utils';
 import { locales } from '@/lib/i18n/settings';
+import LoadingSpinner from "@/components/common/LoadingSpinner";
 
 interface LocaleLayoutProps {
     children: ReactNode;
@@ -27,6 +28,7 @@ export default async function LocaleLayout({
 
     return (
         <div dir={isRTL ? 'rtl' : 'ltr'} lang={lang}>
+            <LoadingSpinner/>
             <Navbar
                 dictionary={dictionary.nav}
                 currentLang={lang}
