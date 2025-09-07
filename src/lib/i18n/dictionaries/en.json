@@ -5,15 +5,162 @@
     "services": "Services",
     "blog": "Blog",
     "contact": "Contact",
-    "logo": "nextStepLogoLighter.svg"
+    "logo": "nextStepLogoLighter.svg",
+    "buttonBooking" : "Book Free Consultation",
+    "numberBooking" : "STUDY-NOW"
   },
   "hero": {
     "title": "MAKE YOUR NEXT STEP",
     "subtitle": "Your Global Education Journey Starts Here\nWe guide students to top universities abroad — from applications to visas, scholarships to settling in.",
     "cta": "Book Free Consultation",
-    "rating": "★★★★★ 4.9/5 from 2,300+ students & parents"
+    "rating": "★★★★★ 4.9/5 from 2,300+ students & parents",
+    "trust":"Trusted by Students in 50+ Countries",
+    "watchHowItWorks": "Watch How It Works →"
   },
   "footer": {
     "rights": "© 2025 GlobEd Consultants. All rights reserved."
+  },
+  "about": {
+    "metaTitle": "About Us - Make Your Next Step",
+    "metaDescription": "Learn about our mission to help students achieve their global education dreams.",
+    "title": "About Make Your Next Step",
+    "subtitle": "We're passionate about helping students navigate their journey to studying abroad.",
+    "missionTitle": "Our Mission & Values",
+    "missionText": "Founded in 2020, Make Your Next Step has helped thousands of students successfully apply to universities worldwide. We believe education should know no borders.",
+    "values": [
+      "Personalized guidance for each student",
+      "Transparent process with no hidden fees",
+      "Expert knowledge of global education systems",
+      "Commitment to student success above all else"
+    ],
+    "stats": [
+      { "value": "5,000+", "label": "Students Guided" },
+      { "value": "50+", "label": "Countries" },
+      { "value": "200+", "label": "Partner Universities" },
+      { "value": "98%", "label": "Success Rate" }
+    ]
+  },
+  "contact": {
+    "metaTitle": "Contact Us - Make Your Next Step",
+    "metaDescription": "Get in touch with our study abroad consultants for personalized guidance.",
+    "title": "Contact Us",
+    "subtitle": "Have questions? Our expert consultants are here to help you every step of the way.",
+    "formTitle": "Send Us a Message",
+    "successMessage": "Thank you! We'll get back to you within 24 hours.",
+    "nameLabel": "Full Name",
+    "namePlaceholder": "Enter your full name",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "you@example.com",
+    "phoneLabel": "Phone Number (Optional)",
+    "phonePlaceholder": "+1 (555) 123-4567",
+    "messageLabel": "How can we help you?",
+    "messagePlaceholder": "Tell us about your study abroad goals...",
+    "submitButton": "Send Message",
+    "infoTitle": "Contact Information",
+    "phoneTitle": "Phone",
+    "emailTitle": "Email",
+    "addressTitle": "Address",
+    "hoursTitle": "Office Hours",
+    "hoursText": "Monday - Friday: 9am - 6pm EST\nSaturday: 10am - 4pm EST\nSunday: Closed"
+  },
+  "footer": {
+    "quickLinks": {
+      "title": "Quick Links",
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "services": {
+      "title": "Our Services",
+      "universityApplications": "University Applications",
+      "visaGuidance": "Visa Guidance",
+      "scholarshipAssistance": "Scholarship Assistance",
+      "testPrep": "Test Preparation",
+      "preDeparture": "Pre-Departure Support"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "address": "123 Education Street, New York, NY 10001, United States"
+    },
+    "newsletter": {
+      "title": "Stay Updated",
+      "placeholder": "Your email address",
+      "button": "Subscribe"
+    },
+    "copyright": "© 2025 Make Your Next Step. All rights reserved.",
+    "logo": "iconNextStepw.svg"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "We offer end-to-end support to help you succeed in your global education journey.",
+    "services": [
+      {
+        "title": "University Applications",
+        "description": "Personalized guidance to help you apply to top universities worldwide.",
+        "icon": "book"
+      },
+      {
+        "title": "Visa Guidance",
+        "description": "Expert advice to navigate visa requirements and avoid common pitfalls.",
+        "icon": "passport"
+      },
+      {
+        "title": "Scholarship Assistance",
+        "description": "Find and apply for scholarships that match your profile and goals.",
+        "icon": "medal"
+      },
+      {
+        "title": "Test Preparation",
+        "description": "Tailored coaching for IELTS, TOEFL, SAT, GRE, and GMAT exams.",
+        "icon": "graduation"
+      },
+      {
+        "title": "Pre-Departure Support",
+        "description": "Prepare for life abroad with cultural orientation and accommodation help.",
+        "icon": "globe"
+      },
+      {
+        "title": "Career Counseling",
+        "description": "Plan your future with expert advice on internships and job opportunities.",
+        "icon": "briefcase"
+      }
+    ],
+    "cta": {
+      "title": "Ready to Start Your Journey?",
+      "subtitle": "Book a free consultation with our expert advisors today.",
+      "button": "Book Free Consultation"
+    }
+  },
+  "countries": {
+    "title": "Countries We Help Immigrate",
+    "subtitle": "We’ve guided students to 50+ countries worldwide.",
+    "countries": [
+      { "code": "FR", "name": "France", "flag": "fr.svg" },
+      { "code": "ES", "name": "Spain", "flag": "es.svg" },
+      { "code": "IT", "name": "Italy", "flag": "it.svg" },
+      { "code": "DE", "name": "Germany", "flag": "de.svg" },
+      { "code": "NL", "name": "Netherlands", "flag": "nl.svg" },
+      { "code": "BE", "name": "Belgium", "flag": "be.svg" },
+      { "code": "PT", "name": "Portugal", "flag": "pt.svg" },
+      { "code": "CH", "name": "Switzerland", "flag": "ch.svg" },
+      { "code": "CA", "name": "Canada", "flag": "ca.svg" },
+      { "code": "US", "name": "United States", "flag": "us.svg" },
+      { "code": "AE", "name": "UAE", "flag": "ae.svg" },
+      { "code": "QA", "name": "Qatar", "flag": "qa.svg" },
+      { "code": "KW", "name": "Kuwait", "flag": "kw.svg" },
+      { "code": "SA", "name": "Saudi Arabia", "flag": "sa.svg" },
+      { "code": "TR", "name": "Turkey", "flag": "tr.svg" },
+      { "code": "MY", "name": "Malaysia", "flag": "my.svg" },
+      { "code": "JP", "name": "Japan", "flag": "jp.svg" },
+      { "code": "AU", "name": "Australia", "flag": "au.svg" },
+      { "code": "NZ", "name": "New Zealand", "flag": "nz.svg" },
+      { "code": "SN", "name": "Senegal", "flag": "sn.svg" }
+    ],
+    "cta": {
+      "text": "Start Your Journey →",
+      "link": "/contact"
+    }
   }
 }

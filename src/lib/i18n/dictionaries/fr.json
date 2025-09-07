@@ -5,15 +5,162 @@
     "services": "Services",
     "blog": "Blog",
     "contact": "Contact",
-    "logo": "nextStepLogoLighter.svg"
+    "logo": "nextStepLogoLighter.svg",
+    "buttonBooking" : "Réserver une consultation gratuite",
+    "numberBooking" : "ÉTUDIER MAINTENANT"
   },
   "hero": {
     "title": "FAITES VOTRE PROCHAIN PAS",
     "subtitle": "Votre parcours éducatif mondial commence ici\nNous accompagnons les étudiants vers les meilleures universités à l’étranger — de la candidature au visa, des bourses à l’installation sur place.",
     "cta": "Réservez une consultation gratuite",
-    "rating": "★★★★★ 4,9/5 par plus de 2 300 étudiants et parents"
+    "rating": "★★★★★ 4,9/5 par plus de 2 300 étudiants et parents",
+    "trust":"Adopté par des étudiants dans plus de 50 pays",
+    "watchHowItWorks": "Regardez comment ça marche →"
   },
   "footer": {
     "rights": "© 2025 GlobEd Consultants. Tous droits réservés."
+  },
+  "about": {
+    "metaTitle": "À propos de nous - Make Your Next Step",
+    "metaDescription": "Découvrez notre mission d'aider les étudiants à réaliser leurs rêves d'éducation internationale.",
+    "title": "À propos de Make Your Next Step",
+    "subtitle": "Nous sommes passionnés par l'accompagnement des étudiants dans leur parcours vers les études à l'étranger.",
+    "missionTitle": "Notre Mission & Valeurs",
+    "missionText": "Fondé en 2020, Make Your Next Step a aidé des milliers d'étudiants à postuler avec succès dans des universités du monde entier. Nous croyons que l'éducation ne devrait connaître aucune frontière.",
+    "values": [
+      "Accompagnement personnalisé pour chaque étudiant",
+      "Processus transparent sans frais cachés",
+      "Expertise des systèmes éducatifs internationaux",
+      "Engagement envers la réussite des étudiants avant tout"
+    ],
+    "stats": [
+      { "value": "5 000+", "label": "Étudiants accompagnés" },
+      { "value": "50+", "label": "Pays" },
+      { "value": "200+", "label": "Universités partenaires" },
+      { "value": "98%", "label": "Taux de réussite" }
+    ]
+  },
+  "contact": {
+    "metaTitle": "Contactez-nous - Make Your Next Step",
+    "metaDescription": "Contactez nos conseillers en études à l'étranger pour un accompagnement personnalisé.",
+    "title": "Contactez-nous",
+    "subtitle": "Des questions ? Nos conseillers experts sont là pour vous accompagner à chaque étape.",
+    "formTitle": "Envoyez-nous un message",
+    "successMessage": "Merci ! Nous vous répondrons dans les 24 heures.",
+    "nameLabel": "Nom complet",
+    "namePlaceholder": "Entrez votre nom complet",
+    "emailLabel": "Adresse e-mail",
+    "emailPlaceholder": "vous@exemple.com",
+    "phoneLabel": "Numéro de téléphone (Optionnel)",
+    "phonePlaceholder": "+33 (0)1 23 45 67 89",
+    "messageLabel": "Comment pouvons-nous vous aider ?",
+    "messagePlaceholder": "Parlez-nous de vos objectifs d'études à l'étranger...",
+    "submitButton": "Envoyer le message",
+    "infoTitle": "Coordonnées",
+    "phoneTitle": "Téléphone",
+    "emailTitle": "Email",
+    "addressTitle": "Adresse",
+    "hoursTitle": "Heures d'ouverture",
+    "hoursText": "Lundi - Vendredi : 9h - 18h (heure de Paris)\nSamedi : 10h - 16h (heure de Paris)\nDimanche : Fermé"
+  },
+  "footer": {
+    "quickLinks": {
+      "title": "Liens Rapides",
+      "home": "Accueil",
+      "about": "À propos",
+      "services": "Services",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "services": {
+      "title": "Nos Services",
+      "universityApplications": "Candidatures universitaires",
+      "visaGuidance": "Conseils pour les visas",
+      "scholarshipAssistance": "Aide aux bourses",
+      "testPrep": "Préparation aux tests",
+      "preDeparture": "Soutien avant le départ"
+    },
+    "contact": {
+      "title": "Contactez-nous",
+      "address": "123 Rue de l'Éducation, New York, NY 10001, États-Unis"
+    },
+    "newsletter": {
+      "title": "Restez informé",
+      "placeholder": "Votre adresse e-mail",
+      "button": "S'abonner"
+    },
+    "copyright": "© 2025 Make Your Next Step. Tous droits réservés.",
+    "logo": "iconNextStepw.svg"
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Nous offrons un accompagnement complet pour vous aider à réussir votre parcours éducatif international.",
+    "services": [
+      {
+        "title": "Candidatures Universitaires",
+        "description": "Accompagnement personnalisé pour postuler dans les meilleures universités du monde.",
+        "icon": "book"
+      },
+      {
+        "title": "Conseils pour les Visas",
+        "description": "Conseils d'experts pour naviguer les exigences de visa et éviter les pièges courants.",
+        "icon": "passport"
+      },
+      {
+        "title": "Aide aux Bourses",
+        "description": "Trouvez et postulez à des bourses correspondant à votre profil et vos objectifs.",
+        "icon": "medal"
+      },
+      {
+        "title": "Préparation aux Tests",
+        "description": "Coaching sur mesure pour les examens IELTS, TOEFL, SAT, GRE et GMAT.",
+        "icon": "graduation"
+      },
+      {
+        "title": "Soutien Avant le Départ",
+        "description": "Préparez-vous à la vie à l'étranger avec une orientation culturelle et une aide au logement.",
+        "icon": "globe"
+      },
+      {
+        "title": "Conseil en Carrière",
+        "description": "Planifiez votre avenir avec des conseils d'experts sur les stages et les opportunités d'emploi.",
+        "icon": "briefcase"
+      }
+    ],
+    "cta": {
+      "title": "Prêt à Commencer Votre Parcours ?",
+      "subtitle": "Réservez une consultation gratuite avec nos conseillers experts dès aujourd'hui.",
+      "button": "Réserver une Consultation Gratuite"
+    }
+  },
+  "countries": {
+    "title": "Pays vers lesquels nous aidons à immigrer",
+    "subtitle": "Nous avons guidé des étudiants vers plus de 50 pays dans le monde.",
+    "countries": [
+      { "code": "FR", "name": "France", "flag": "fr.svg" },
+      { "code": "ES", "name": "Espagne", "flag": "es.svg" },
+      { "code": "IT", "name": "Italie", "flag": "it.svg" },
+      { "code": "DE", "name": "Allemagne", "flag": "de.svg" },
+      { "code": "NL", "name": "Pays-Bas", "flag": "nl.svg" },
+      { "code": "BE", "name": "Belgique", "flag": "be.svg" },
+      { "code": "PT", "name": "Portugal", "flag": "pt.svg" },
+      { "code": "CH", "name": "Suisse", "flag": "ch.svg" },
+      { "code": "CA", "name": "Canada", "flag": "ca.svg" },
+      { "code": "US", "name": "États-Unis", "flag": "us.svg" },
+      { "code": "AE", "name": "Émirats Arabes Unis", "flag": "ae.svg" },
+      { "code": "QA", "name": "Qatar", "flag": "qa.svg" },
+      { "code": "KW", "name": "Koweït", "flag": "kw.svg" },
+      { "code": "SA", "name": "Arabie Saoudite", "flag": "sa.svg" },
+      { "code": "TR", "name": "Turquie", "flag": "tr.svg" },
+      { "code": "MY", "name": "Malaisie", "flag": "my.svg" },
+      { "code": "JP", "name": "Japon", "flag": "jp.svg" },
+      { "code": "AU", "name": "Australie", "flag": "au.svg" },
+      { "code": "NZ", "name": "Nouvelle-Zélande", "flag": "nz.svg" },
+      { "code": "SN", "name": "Sénégal", "flag": "sn.svg" }
+    ],
+    "cta": {
+      "text": "Commencez votre parcours →",
+      "link": "/contact"
+    }
   }
 }

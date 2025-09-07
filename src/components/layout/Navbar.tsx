@@ -10,6 +10,8 @@ import Image from "next/image";
 
 interface NavbarProps {
     dictionary: {
+        numberBooking: string;
+        buttonBooking: string;
         logo: string;
         home: string;
         about: string;
@@ -66,6 +68,7 @@ export default function Navbar({ dictionary, currentLang }: NavbarProps) {
                                                 ? 'text-primary-600 border-b-2 border-primary-600 pb-1'
                                                 : 'text-neutral-700 hover:text-primary-600'
                                         }`}
+                                        style={{ whiteSpace: 'nowrap' }}
                                     >
                                         {item.label}
                                     </Link>
@@ -80,7 +83,7 @@ export default function Navbar({ dictionary, currentLang }: NavbarProps) {
                                 className="hidden lg:flex items-center text-sm text-neutral-600 hover:text-primary-600 font-medium"
                             >
                                 <Phone className="w-7 h-7 mr-2" />
-                                +1 (800) STUDY-NOW
+                                +1 (800) {dictionary.numberBooking}
                             </a>
 
                             {/* Search */}
@@ -98,7 +101,7 @@ export default function Navbar({ dictionary, currentLang }: NavbarProps) {
                                 href={`/${currentLang}/contact`}
                                 className="bg-accent-500 hover:bg-accent-600 px-5 py-2 text-white rounded-lg font-medium text-sm lg:text-base transition transform hover:scale-105 shadow-sm whitespace-nowrap"
                             >
-                                Book Free Consultation
+                                {dictionary.buttonBooking}
                             </Link>
                         </div>
 
