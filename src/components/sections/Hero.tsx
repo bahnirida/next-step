@@ -41,7 +41,7 @@ export default function Hero({ dictionary, currentLang = 'en' }: HeroProps) {
                     src="/bgHero.jpg"
                     alt="Student studying abroad"
                     fill
-                    className="object-center opacity-70"
+                    className="object-cover opacity-70"
                     priority
                     sizes="100vw"
                 />
@@ -73,12 +73,6 @@ export default function Hero({ dictionary, currentLang = 'en' }: HeroProps) {
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-36">
                 <div className={`${textAlignClass} max-w-4xl mx-auto md:mx-0 px-4 md:px-0`}>
 
-                    {/* Trust Badge - Top Left */}
-                    <div
-                        className="inline-block bg-white border border-neutral-200 rounded-full px-4 py-1.5 text-sm font-medium text-neutral-700 mb-6 shadow-sm">
-                        <Earth className="text-blue-600 w-4 h-4 mr-2 inline"/>
-                        {t.trust}
-                    </div>
 
                     {/* Title */}
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
@@ -103,20 +97,7 @@ export default function Hero({ dictionary, currentLang = 'en' }: HeroProps) {
                         >
                             {t.cta}
                         </Link>
-
-                        <button
-                            onClick={() => document.getElementById('video')?.scrollIntoView({behavior: 'smooth'})}
-                            className="hidden sm:flex items-center text-white hover:text-primary-200 font-medium"
-                        >
-                            {isRTL ? '← شاهد كيف يعمل' : t.watchHowItWorks}
-                        </button>
                     </div>
-
-                    {/* Rating */}
-                    <div className="text-sm text-white">
-                        {t.rating}
-                    </div>
-
 
                 </div>
             </div>

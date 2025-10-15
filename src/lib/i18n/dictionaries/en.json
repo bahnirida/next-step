@@ -5,7 +5,7 @@
     "services": "Services",
     "blog": "Blog",
     "contact": "Contact",
-    "logo": "nextStepLogoLighter.svg",
+    "logo": "logo.jpg",
     "buttonBooking" : "Book Free Consultation",
     "numberBooking" : "STUDY-NOW"
   },
@@ -95,7 +95,7 @@
       "button": "Subscribe"
     },
     "copyright": "© 2025 Make Your Next Step. All rights reserved.",
-    "logo": "iconNextStepw.svg"
+    "logo": "logo.jpg"
   },
   "services": {
     "title": "Our Services",
@@ -139,7 +139,7 @@
     }
   },
   "countries": {
-    "title": "Countries We Help Immigrate To",
+    "title": "Start Your Study Abroad",
     "subtitle": "Empowering global mobility and cross-border opportunities",
     "toLabel": "To:",
     "fromLabel": "From:",

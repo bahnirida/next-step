@@ -5,7 +5,7 @@
     "services": "Services",
     "blog": "Blog",
     "contact": "Contact",
-    "logo": "nextStepLogoLighter.svg",
+    "logo": "logo.jpg",
     "buttonBooking" : "Réserver une consultation gratuite",
     "numberBooking" : "ÉTUDIER MAINTENANT"
   },
@@ -95,7 +95,7 @@
       "button": "S'abonner"
     },
     "copyright": "© 2025 Make Your Next Step. Tous droits réservés.",
-    "logo": "iconNextStepw.svg"
+    "logo": "logo.jpg"
   },
   "services": {
     "title": "Nos Services",

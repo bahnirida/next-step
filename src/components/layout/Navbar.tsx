@@ -27,10 +27,9 @@ export default function Navbar({ dictionary, currentLang }: NavbarProps) {
     const pathname = usePathname();
 
     const navItems = [
-        { href: `/${currentLang}`, label: dictionary.home },
+        { href: `#`, label: dictionary.home },
         { href: `/${currentLang}/about`, label: dictionary.about },
         { href: `/${currentLang}/services`, label: dictionary.services },
-        { href: `/${currentLang}/blog`, label: dictionary.blog },
         { href: `/${currentLang}/contact`, label: dictionary.contact },
     ];
 
@@ -79,11 +78,11 @@ export default function Navbar({ dictionary, currentLang }: NavbarProps) {
 
                             {/* Phone */}
                             <a
-                                href="tel:+18007883966"
+                                href="tel:+37128011171"
                                 className="hidden lg:flex items-center text-sm text-neutral-600 hover:text-primary-600 font-medium"
                             >
                                 <Phone className="w-7 h-7 mr-2" />
-                                +1 (800) {dictionary.numberBooking}
+                                +(371) {dictionary.numberBooking}
                             </a>
 
                             {/* Search */}

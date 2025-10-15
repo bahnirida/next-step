@@ -98,3 +98,6 @@ body {
 .animate-marquee-right {
   animation: marquee-right 20s linear infinite;
 }
+.animate-marquee-partners {
+  animation: marquee-left 25s linear infinite;
+}

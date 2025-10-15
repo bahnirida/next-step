@@ -5,7 +5,7 @@
     "services": "Услуги",
     "blog": "Блог",
     "contact": "Контакты",
-    "logo": "nextStepLogoLighter.svg",
+    "logo": "logo.jpg",
     "buttonBooking" : "Записаться на консультацию",
     "numberBooking" : "STUDY-NOW"
   },
@@ -95,7 +95,7 @@
       "button": "Подписаться"
     },
     "copyright": "© 2025 Make Your Next Step. Все права защищены.",
-    "logo": "iconNextStepw.svg"
+    "logo": "logo.jpg"
   },
   "services": {
     "title": "Наши услуги",

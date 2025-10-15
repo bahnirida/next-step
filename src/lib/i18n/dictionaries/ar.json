@@ -5,7 +5,7 @@
     "services": "خدماتنا",
     "blog": "المدونة",
     "contact": "اتصل بنا",
-    "logo": "nextStepLogoAr.svg",
+    "logo": "logo.jpg",
     "buttonBooking" : "احجز استشارة مجانية",
     "numberBooking" : "ادرس الآن"
   },
@@ -95,7 +95,7 @@
       "button": "اشترك"
     },
     "copyright": "© ٢٠٢٥ Make Your Next Step. جميع الحقوق محفوظة.",
-    "logo": "iconNextStepAr.svg"
+    "logo": "logo.jpg"
   },
   "services": {
     "title": "خدماتنا",

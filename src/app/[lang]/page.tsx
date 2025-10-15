@@ -4,6 +4,7 @@ import Hero from '@/components/sections/Hero';
 import Footer from "@/components/layout/Footer";
 import ServicesShowcase from "@/components/sections/ServicesShowcase";
 import CountriesShowcase from "@/components/sections/CountriesShowcase";
+import PartnersSection from "@/components/sections/PartnersSection";
 import TeamShowcase from "@/components/sections/TeamShowcase";
 import ContactSection from "@/components/sections/ContactSection";
 import JourneySteps from "@/components/sections/JourneySteps";
@@ -29,6 +30,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
             <CountriesShowcase dictionary={dictionary.countries} currentLang={lang}/>
             {/*<JourneySteps dictionary={dictionary.journey} currentLang={lang}/>*/}
             <TeamShowcase dictionary={dictionary.team} currentLang={lang}/>
+            <PartnersSection />
             <ContactSection dictionary={dictionary.contact} currentLang={lang}/>
             {/* Add other sections here */}
             <Footer

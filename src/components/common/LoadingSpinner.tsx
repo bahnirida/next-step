@@ -22,7 +22,7 @@ export default function LoadingSpinner() {
             <div className="text-center">
                 <div className="mb-6">
                     <Image
-                        src="/nextStepLogoLighter.svg" // ← Your logo
+                        src="/logo.jpg" // ← Your logo
                         alt="Make Your Next Step"
                         width={120}
                         height={40}
