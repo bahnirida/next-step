@@ -139,29 +139,22 @@
     }
   },
   "countries": {
-    "title": "जिन देशों में हम मदद करते हैं",
-    "subtitle": "हमने 50+ देशों में छात्रों का मार्गदर्शन किया है.",
-    "countries": [
-      { "code": "FR", "name": "फ़्रांस", "flag": "fr.svg" },
-      { "code": "ES", "name": "स्पेन", "flag": "es.svg" },
-      { "code": "IT", "name": "इटली", "flag": "it.svg" },
-      { "code": "DE", "name": "जर्मनी", "flag": "de.svg" },
-      { "code": "NL", "name": "नीदरलैंड", "flag": "nl.svg" },
-      { "code": "BE", "name": "बेल्जियम", "flag": "be.svg" },
-      { "code": "PT", "name": "पुर्तगाल", "flag": "pt.svg" },
-      { "code": "CH", "name": "स्विट्ज़रलैंड", "flag": "ch.svg" },
-      { "code": "CA", "name": "कनाडा", "flag": "ca.svg" },
-      { "code": "US", "name": "संयुक्त राज्य", "flag": "us.svg" },
-      { "code": "AE", "name": "यूएई", "flag": "ae.svg" },
-      { "code": "QA", "name": "क़तर", "flag": "qa.svg" },
-      { "code": "KW", "name": "कुवैत", "flag": "kw.svg" },
-      { "code": "SA", "name": "सऊदी अरब", "flag": "sa.svg" },
-      { "code": "TR", "name": "तुर्की", "flag": "tr.svg" },
-      { "code": "MY", "name": "मलेशिया", "flag": "my.svg" },
-      { "code": "JP", "name": "जापान", "flag": "jp.svg" },
-      { "code": "AU", "name": "ऑस्ट्रेलिया", "flag": "au.svg" },
-      { "code": "NZ", "name": "न्यूज़ीलैंड", "flag": "nz.svg" },
-      { "code": "SN", "name": "सेनेगल", "flag": "sn.svg" }
+    "title": "वे देश जहाँ हम आव्रजन में मदद करते हैं",
+    "subtitle": "वैश्विक गतिशीलता और सीमा-पार अवसरों को सक्षम बनाना",
+    "toLabel": "हम आपको इन देशों में बसने में मदद करते हैं:",
+    "fromLabel": "हमारे ग्राहक इन देशों से आते हैं:",
+    "toCountries": [
+      { "code": "LV", "name": "लातविया", "flag": "lv.svg" },
+      { "code": "LT", "name": "लिथुआनिया", "flag": "lt.svg" },
+      { "code": "EE", "name": "एस्तोनिया", "flag": "ee.svg" },
+      { "code": "PL", "name": "पोलैंड", "flag": "pl.svg" }
+    ],
+    "fromCountries": [
+      { "code": "MA", "name": "मोरक्को", "flag": "ma.svg" },
+      { "code": "RU", "name": "रूस", "flag": "ru.svg" },
+      { "code": "UZ", "name": "उज़्बेकिस्तान", "flag": "uz.svg" },
+      { "code": "IN", "name": "भारत", "flag": "in.svg" },
+      { "code": "BD", "name": "बांग्लादेश", "flag": "bd.svg" }
     ],
     "cta": {
       "text": "अपनी यात्रा शुरू करें →",

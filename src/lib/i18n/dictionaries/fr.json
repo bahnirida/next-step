@@ -139,29 +139,22 @@
     }
   },
   "countries": {
-    "title": "Pays vers lesquels nous aidons à immigrer",
-    "subtitle": "Nous avons guidé des étudiants vers plus de 50 pays dans le monde.",
-    "countries": [
-      { "code": "FR", "name": "France", "flag": "fr.svg" },
-      { "code": "ES", "name": "Espagne", "flag": "es.svg" },
-      { "code": "IT", "name": "Italie", "flag": "it.svg" },
-      { "code": "DE", "name": "Allemagne", "flag": "de.svg" },
-      { "code": "NL", "name": "Pays-Bas", "flag": "nl.svg" },
-      { "code": "BE", "name": "Belgique", "flag": "be.svg" },
-      { "code": "PT", "name": "Portugal", "flag": "pt.svg" },
-      { "code": "CH", "name": "Suisse", "flag": "ch.svg" },
-      { "code": "CA", "name": "Canada", "flag": "ca.svg" },
-      { "code": "US", "name": "États-Unis", "flag": "us.svg" },
-      { "code": "AE", "name": "Émirats Arabes Unis", "flag": "ae.svg" },
-      { "code": "QA", "name": "Qatar", "flag": "qa.svg" },
-      { "code": "KW", "name": "Koweït", "flag": "kw.svg" },
-      { "code": "SA", "name": "Arabie Saoudite", "flag": "sa.svg" },
-      { "code": "TR", "name": "Turquie", "flag": "tr.svg" },
-      { "code": "MY", "name": "Malaisie", "flag": "my.svg" },
-      { "code": "JP", "name": "Japon", "flag": "jp.svg" },
-      { "code": "AU", "name": "Australie", "flag": "au.svg" },
-      { "code": "NZ", "name": "Nouvelle-Zélande", "flag": "nz.svg" },
-      { "code": "SN", "name": "Sénégal", "flag": "sn.svg" }
+    "title": "Pays vers lesquels nous accompagnons l'immigration",
+    "subtitle": "Favoriser la mobilité internationale et les opportunités transfrontalières",
+    "toLabel": "vers :",
+    "fromLabel": "viennent de :",
+    "toCountries": [
+      { "code": "LV", "name": "Lettonie", "flag": "lv.svg" },
+      { "code": "LT", "name": "Lituanie", "flag": "lt.svg" },
+      { "code": "EE", "name": "Estonie", "flag": "ee.svg" },
+      { "code": "PL", "name": "Pologne", "flag": "pl.svg" }
+    ],
+    "fromCountries": [
+      { "code": "MA", "name": "Maroc", "flag": "ma.svg" },
+      { "code": "RU", "name": "Russie", "flag": "ru.svg" },
+      { "code": "UZ", "name": "Ouzbékistan", "flag": "uz.svg" },
+      { "code": "IN", "name": "Inde", "flag": "in.svg" },
+      { "code": "BD", "name": "Bangladesh", "flag": "bd.svg" }
     ],
     "cta": {
       "text": "Commencez votre parcours →",

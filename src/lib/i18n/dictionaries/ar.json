@@ -139,29 +139,22 @@
     }
   },
   "countries": {
-    "title": "الدول التي نساعد في الهجرة إليها",
-    "subtitle": "لقد أرشدنا الطلاب إلى أكثر من ٥٠ دولة حول العالم.",
-    "countries": [
-        { "code": "FR", "name": "فرنسا", "flag": "fr.svg" },
-        { "code": "ES", "name": "إسبانيا", "flag": "es.svg" },
-        { "code": "IT", "name": "إيطاليا", "flag": "it.svg" },
-        { "code": "DE", "name": "ألمانيا", "flag": "de.svg" },
-        { "code": "NL", "name": "هولندا", "flag": "nl.svg" },
-        { "code": "BE", "name": "بلجيكا", "flag": "be.svg" },
-        { "code": "PT", "name": "البرتغال", "flag": "pt.svg" },
-        { "code": "CH", "name": "سويسرا", "flag": "ch.svg" },
-        { "code": "CA", "name": "كندا", "flag": "ca.svg" },
-        { "code": "US", "name": "الولايات المتحدة", "flag": "us.svg" },
-        { "code": "AE", "name": "الإمارات العربية المتحدة", "flag": "ae.svg" },
-        { "code": "QA", "name": "قطر", "flag": "qa.svg" },
-        { "code": "KW", "name": "الكويت", "flag": "kw.svg" },
-        { "code": "SA", "name": "المملكة العربية السعودية", "flag": "sa.svg" },
-        { "code": "TR", "name": "تركيا", "flag": "tr.svg" },
-        { "code": "MY", "name": "ماليزيا", "flag": "my.svg" },
-        { "code": "JP", "name": "اليابان", "flag": "jp.svg" },
-        { "code": "AU", "name": "أستراليا", "flag": "au.svg" },
-        { "code": "NZ", "name": "نيوزيلندا", "flag": "nz.svg" },
-        { "code": "SN", "name": "السنغال", "flag": "sn.svg" }
+    "title": "البلدان التي نساعدك على الهجرة إليها",
+    "subtitle": "نُمكّن التنقل العالمي والفرص العابرة للحدود",
+    "toLabel": "إلى:",
+    "fromLabel": "من:",
+    "toCountries": [
+        { "code": "LV", "name": "لاتفيا", "flag": "lv.svg" },
+        { "code": "LT", "name": "ليتوانيا", "flag": "lt.svg" },
+        { "code": "EE", "name": "إستونيا", "flag": "ee.svg" },
+        { "code": "PL", "name": "بولندا", "flag": "pl.svg" }
+    ],
+    "fromCountries": [
+        { "code": "MA", "name": "المغرب", "flag": "ma.svg" },
+        { "code": "RU", "name": "روسيا", "flag": "ru.svg" },
+        { "code": "UZ", "name": "أوزبكستان", "flag": "uz.svg" },
+        { "code": "IN", "name": "الهند", "flag": "in.svg" },
+        { "code": "BD", "name": "بنغلاديش", "flag": "bd.svg" }
     ],
     "cta": {
       "text": "ابدأ رحلتك →",

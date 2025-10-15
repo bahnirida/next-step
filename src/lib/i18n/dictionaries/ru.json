@@ -139,29 +139,22 @@
     }
   },
   "countries": {
-    "title": "Страны, куда мы помогаем переехать",
-    "subtitle": "Мы сопровождали студентов более чем в 50 стран мира.",
-    "countries": [
-      { "code": "FR", "name": "Франция", "flag": "fr.svg" },
-      { "code": "ES", "name": "Испания", "flag": "es.svg" },
-      { "code": "IT", "name": "Италия", "flag": "it.svg" },
-      { "code": "DE", "name": "Германия", "flag": "de.svg" },
-      { "code": "NL", "name": "Нидерланды", "flag": "nl.svg" },
-      { "code": "BE", "name": "Бельгия", "flag": "be.svg" },
-      { "code": "PT", "name": "Португалия", "flag": "pt.svg" },
-      { "code": "CH", "name": "Швейцария", "flag": "ch.svg" },
-      { "code": "CA", "name": "Канада", "flag": "ca.svg" },
-      { "code": "US", "name": "США", "flag": "us.svg" },
-      { "code": "AE", "name": "ОАЭ", "flag": "ae.svg" },
-      { "code": "QA", "name": "Катар", "flag": "qa.svg" },
-      { "code": "KW", "name": "Кувейт", "flag": "kw.svg" },
-      { "code": "SA", "name": "Саудовская Аравия", "flag": "sa.svg" },
-      { "code": "TR", "name": "Турция", "flag": "tr.svg" },
-      { "code": "MY", "name": "Малайзия", "flag": "my.svg" },
-      { "code": "JP", "name": "Япония", "flag": "jp.svg" },
-      { "code": "AU", "name": "Австралия", "flag": "au.svg" },
-      { "code": "NZ", "name": "Новая Зеландия", "flag": "nz.svg" },
-      { "code": "SN", "name": "Сенегал", "flag": "sn.svg" }
+    "title": "Страны, куда мы помогаем иммигрировать",
+    "subtitle": "Расширяем глобальную мобильность и трансграничные возможности",
+    "toLabel": "Мы помогаем переехать в:",
+    "fromLabel": "Наши клиенты приезжают из:",
+    "toCountries": [
+      { "code": "LV", "name": "Латвия", "flag": "lv.svg" },
+      { "code": "LT", "name": "Литва", "flag": "lt.svg" },
+      { "code": "EE", "name": "Эстония", "flag": "ee.svg" },
+      { "code": "PL", "name": "Польша", "flag": "pl.svg" }
+    ],
+    "fromCountries": [
+      { "code": "MA", "name": "Марокко", "flag": "ma.svg" },
+      { "code": "RU", "name": "Россия", "flag": "ru.svg" },
+      { "code": "UZ", "name": "Узбекистан", "flag": "uz.svg" },
+      { "code": "IN", "name": "Индия", "flag": "in.svg" },
+      { "code": "BD", "name": "Бангладеш", "flag": "bd.svg" }
     ],
     "cta": {
       "text": "Начать путь →",

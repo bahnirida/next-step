@@ -139,29 +139,22 @@
     }
   },
   "countries": {
-    "title": "Countries We Help Immigrate",
-    "subtitle": "We’ve guided students to 50+ countries worldwide.",
-    "countries": [
-      { "code": "FR", "name": "France", "flag": "fr.svg" },
-      { "code": "ES", "name": "Spain", "flag": "es.svg" },
-      { "code": "IT", "name": "Italy", "flag": "it.svg" },
-      { "code": "DE", "name": "Germany", "flag": "de.svg" },
-      { "code": "NL", "name": "Netherlands", "flag": "nl.svg" },
-      { "code": "BE", "name": "Belgium", "flag": "be.svg" },
-      { "code": "PT", "name": "Portugal", "flag": "pt.svg" },
-      { "code": "CH", "name": "Switzerland", "flag": "ch.svg" },
-      { "code": "CA", "name": "Canada", "flag": "ca.svg" },
-      { "code": "US", "name": "United States", "flag": "us.svg" },
-      { "code": "AE", "name": "UAE", "flag": "ae.svg" },
-      { "code": "QA", "name": "Qatar", "flag": "qa.svg" },
-      { "code": "KW", "name": "Kuwait", "flag": "kw.svg" },
-      { "code": "SA", "name": "Saudi Arabia", "flag": "sa.svg" },
-      { "code": "TR", "name": "Turkey", "flag": "tr.svg" },
-      { "code": "MY", "name": "Malaysia", "flag": "my.svg" },
-      { "code": "JP", "name": "Japan", "flag": "jp.svg" },
-      { "code": "AU", "name": "Australia", "flag": "au.svg" },
-      { "code": "NZ", "name": "New Zealand", "flag": "nz.svg" },
-      { "code": "SN", "name": "Senegal", "flag": "sn.svg" }
+    "title": "Countries We Help Immigrate To",
+    "subtitle": "Empowering global mobility and cross-border opportunities",
+    "toLabel": "To:",
+    "fromLabel": "From:",
+    "toCountries": [
+      { "code": "LV", "name": "Latvia", "flag": "lv.svg" },
+      { "code": "LT", "name": "Lithuania", "flag": "lt.svg" },
+      { "code": "EE", "name": "Estonia", "flag": "ee.svg" },
+      { "code": "PL", "name": "Poland", "flag": "pl.svg" }
+    ],
+    "fromCountries": [
+      { "code": "MA", "name": "Morocco", "flag": "ma.svg" },
+      { "code": "RU", "name": "Russia", "flag": "ru.svg" },
+      { "code": "UZ", "name": "Uzbekistan", "flag": "uz.svg" },
+      { "code": "IN", "name": "India", "flag": "in.svg" },
+      { "code": "BD", "name": "Bangladesh", "flag": "bd.svg" }
     ],
     "cta": {
       "text": "Start Your Journey →",

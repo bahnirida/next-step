@@ -14,7 +14,10 @@ interface CountriesShowcaseProps {
     dictionary: {
         title: string;
         subtitle: string;
-        countries: CountryItem[];
+        toLabel?: string;
+        fromLabel?: string;
+        toCountries: CountryItem[];
+        fromCountries: CountryItem[];
         cta: {
             text: string;
             link: string;
@@ -24,9 +27,6 @@ interface CountriesShowcaseProps {
 }
 
 export default function CountriesShowcase({ dictionary, currentLang }: CountriesShowcaseProps) {
-    const evenCountries = dictionary.countries.filter((_, i) => i % 2 === 0);
-    const oddCountries = dictionary.countries.filter((_, i) => i % 2 === 1);
-
     // Detect RTL language
     const isRTL = currentLang?.startsWith("ar");
 
@@ -76,19 +76,31 @@ export default function CountriesShowcase({ dictionary, currentLang }: Countries
             </div>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 mb-6">
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 mb-4 text-center">
                         {dictionary.title}
                     </h2>
-                    <p className="text-xl text-neutral-700 max-w-3xl mx-auto">
-                        {dictionary.subtitle}
-                    </p>
+                    {dictionary.subtitle && (
+                        <p className="text-lg text-neutral-600 text-center mb-10 max-w-3xl mx-auto">
+                            {dictionary.subtitle}
+                        </p>
+                    )}
                 </div>
 
                 {/* Dual Tickers */}
-                <div className="space-y-8">
-                    {renderTickerLine(evenCountries, "right")}
-                    {renderTickerLine(oddCountries, "left")}
+                <div className="space-y-10">
+                    <div className="space-y-6">
+                        <h3 className="text-xl font-semibold text-center text-neutral-700">
+                            {dictionary.fromLabel ?? 'Clients Come From:'}
+                        </h3>
+                        {renderTickerLine(dictionary.fromCountries, "left")}
+                    </div>
+                    <div className="space-y-6">
+                        <h3 className="text-xl font-semibold text-center text-neutral-700">
+                            {dictionary.toLabel ?? 'We Help Immigrate To:'}
+                        </h3>
+                        {renderTickerLine(dictionary.toCountries, "right")}
+                    </div>
                 </div>
 
                 {/* CTA */}
