@@ -21,12 +21,19 @@ export default function LanguageSwitcher({ currentLang }: { currentLang: string 
         { value: 'en', label: 'English', flag: '/flags/en.svg' },
         { value: 'fr', label: 'Français', flag: '/flags/fr.svg' },
         { value: 'ar', label: 'العربية', flag: '/flags/ar.svg' },
+        { value: 'ru', label: 'Русский', flag: '/flags/ru.svg' },
+        { value: 'hi', label: 'हिन्दी', flag: '/flags/in.svg' },
     ];
 
     const currentLangObj = languages.find(lang => lang.value === currentLang) || languages[0];
 
     const switchLanguage = (newLang: string) => {
-        const newPath = pathname.replace(/^\/(ar|fr|en)/, `/${newLang}`);
+        const knownLocales = languages.map((lang) => lang.value).join('|');
+        const localePattern = new RegExp(`^/(${knownLocales})(?=/|$)`);
+        const normalizedPath = pathname.startsWith('/') ? pathname : `/${pathname}`;
+        const newPath = normalizedPath.match(localePattern)
+            ? normalizedPath.replace(localePattern, `/${newLang}`)
+            : `/${newLang}${normalizedPath === '/' ? '' : normalizedPath}`;
         router.push(newPath);
         setIsOpen(false); // ✅ Close dropdown after selection
     };

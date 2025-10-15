@@ -41,7 +41,7 @@ export default function Hero({ dictionary, currentLang = 'en' }: HeroProps) {
                     src="/bgHero.jpg"
                     alt="Student studying abroad"
                     fill
-                    className="object-cover opacity-70"
+                    className="object-center opacity-70"
                     priority
                     sizes="100vw"
                 />
