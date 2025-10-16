@@ -105,3 +105,16 @@ body {
 .animate-marquee-partners {
   animation: marquee-left 25s linear infinite;
 }
+input, textarea, select {
+  color: #111827 !important;          /* same as Tailwind text-neutral-900 */
+  opacity: 1 !important;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9ca3af !important;          /* Tailwind gray-400 */
+  opacity: 1 !important;
+}
