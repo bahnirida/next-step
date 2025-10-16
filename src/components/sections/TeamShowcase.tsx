@@ -36,7 +36,7 @@ interface TeamShowcaseProps {
 
 export default function TeamShowcase({ dictionary, currentLang }: TeamShowcaseProps) {
     return (
-        <section className="relative py-24 bg-white">
+        <section id="about" className="relative pt-24 bg-white">
             <div className="absolute top-3 left-3 hidden md:block ">
                 <Image
                     src="/illustrations/flightLignes-10.svg"
@@ -58,7 +58,7 @@ export default function TeamShowcase({ dictionary, currentLang }: TeamShowcasePr
                 </div>
 
                 {/* Team Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-5">
                     {dictionary.team.map((member) => (
                         <div
                             key={member.id}
@@ -95,30 +95,7 @@ export default function TeamShowcase({ dictionary, currentLang }: TeamShowcasePr
                     ))}
                 </div>
 
-                {/* Stats Banner */}
-                <div
-                    className="bg-gradient-to-r from-primary-500 to-accent-500 rounded-2xl p-8 md:p-12 text-center text-white">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div>
-                            <div className="text-3xl md:text-4xl font-bold mb-2">
-                                {dictionary.stats.students}
-                            </div>
-                            <div className="text-lg">Students Guided</div>
-                        </div>
-                        <div>
-                            <div className="text-3xl md:text-4xl font-bold mb-2">
-                                {dictionary.stats.successRate}
-                            </div>
-                            <div className="text-lg">Success Rate</div>
-                        </div>
-                        <div>
-                            <div className="text-3xl md:text-4xl font-bold mb-2">
-                                {dictionary.stats.countries}
-                            </div>
-                            <div className="text-lg">Countries</div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </section>
     );

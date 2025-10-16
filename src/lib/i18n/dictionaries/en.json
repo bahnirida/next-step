@@ -48,6 +48,8 @@
       "namePlaceholder": "Enter your full name",
       "emailLabel": "Email Address",
       "emailPlaceholder": "you@example.com",
+      "numberLabel": "Phone Number",
+      "numberPlaceholder": "+21261111111",
       "messageLabel": "Your Message",
       "messagePlaceholder": "Tell us how we can help you...",
       "submitButton": "Send Message",
@@ -55,13 +57,13 @@
     },
     "info": {
       "phoneTitle": "Phone",
-      "phone": "+1 (800) STUDY-NOW",
+      "phone": "+(371) STUDY-NOW",
       "emailTitle": "Email",
-      "email": "info@makeyournextstep.com",
+      "email": "info@edupath.com",
       "addressTitle": "Address",
-      "address": "123 Education Street, New York, NY 10001, United States",
+      "address": "Marrakešas iela 12, Rīga, Latvia",
       "hoursTitle": "Office Hours",
-      "hours": "Monday - Friday: 9am - 6pm EST\nSaturday: 10am - 4pm EST\nSunday: Closed"
+      "hours": "Monday - Friday: 9am - 6pm \nSaturday: 10am - 4pm \nSunday: Closed"
     },
     "cta": {
       "text": "Book Free Consultation",
@@ -87,7 +89,7 @@
     },
     "contact": {
       "title": "Contact Us",
-      "address": "123 Education Street, New York, NY 10001, United States"
+      "address": "Marrakešas iela 12, Rīga, Latvia"
     },
     "newsletter": {
       "title": "Stay Updated",

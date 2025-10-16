@@ -14,7 +14,6 @@ interface FooterProps {
             home: string;
             about: string;
             services: string;
-            blog: string;
             contact: string;
         };
         services: {
@@ -79,7 +78,7 @@ export default function Footer({ dictionary, currentLang }: FooterProps) {
                             />
                         </Link>
                         <p className="text-neutral-400 mb-6 max-w-xs">
-                            Guiding students to global education success since 2020.
+                            Guiding students to europe.
                         </p>
                         <div className="flex space-x-4">
                             <a href="#" className="text-neutral-400 hover:text-white transition">
@@ -104,7 +103,6 @@ export default function Footer({ dictionary, currentLang }: FooterProps) {
                             <li><Link href={`/${currentLang}`} className="text-neutral-400 hover:text-white transition">• {dictionary.quickLinks.home}</Link></li>
                             <li><Link href={`/${currentLang}/about`} className="text-neutral-400 hover:text-white transition">• {dictionary.quickLinks.about}</Link></li>
                             <li><Link href={`/${currentLang}/services`} className="text-neutral-400 hover:text-white transition">• {dictionary.quickLinks.services}</Link></li>
-                            <li><Link href={`/${currentLang}/blog`} className="text-neutral-400 hover:text-white transition">• {dictionary.quickLinks.blog}</Link></li>
                             <li><Link href={`/${currentLang}/contact`} className="text-neutral-400 hover:text-white transition">• {dictionary.quickLinks.contact}</Link></li>
                         </ul>
                     </div>
@@ -131,11 +129,11 @@ export default function Footer({ dictionary, currentLang }: FooterProps) {
                             </div>
                             <div className="flex items-center">
                                 <Phone className="w-5 h-5 mr-3" />
-                                <span>+1 (800) STUDY-NOW</span>
+                                <span>+371 STUDY-NOW</span>
                             </div>
                             <div className="flex items-center">
                                 <Mail className="w-5 h-5 mr-3" />
-                                <span>info@makeyournextstep.com</span>
+                                <span>info@edupath.com</span>
                             </div>
                         </div>
                     </div>

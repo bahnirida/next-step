@@ -1,9 +1,9 @@
 // src/components/layout/Navbar.tsx
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import type { MouseEvent as ReactMouseEvent } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import { Phone, Search, Menu, X } from 'lucide-react';
 import LanguageSwitcher from "@/components/common/LanguageSwitcher";
 import Image from "next/image";
@@ -24,14 +24,47 @@ interface NavbarProps {
 
 export default function Navbar({ dictionary, currentLang }: NavbarProps) {
     const [isOpen, setIsOpen] = useState(false);
-    const pathname = usePathname();
+    const [activeHash, setActiveHash] = useState('#home');
 
     const navItems = [
-        { href: `#`, label: dictionary.home },
-        { href: `/${currentLang}/about`, label: dictionary.about },
-        { href: `/${currentLang}/services`, label: dictionary.services },
-        { href: `/${currentLang}/contact`, label: dictionary.contact },
+        { href: '#home', label: dictionary.home },
+        { href: '#about', label: dictionary.about },
+        { href: '#services', label: dictionary.services },
+        { href: '#contact', label: dictionary.contact },
     ];
+
+    useEffect(() => {
+        if (typeof window === 'undefined') return;
+
+        const updateHash = () => {
+            const currentHash = window.location.hash || '#home';
+            setActiveHash(currentHash);
+        };
+
+        updateHash();
+        window.addEventListener('hashchange', updateHash);
+        return () => {
+            window.removeEventListener('hashchange', updateHash);
+        };
+    }, []);
+
+    const handleNavClick = (event: ReactMouseEvent<HTMLAnchorElement>, href: string) => {
+        event.preventDefault();
+        setIsOpen(false);
+
+        if (typeof document === 'undefined' || typeof window === 'undefined') {
+            return;
+        }
+
+        const target = document.querySelector<HTMLElement>(href);
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            window.history.replaceState(null, '', href);
+            setActiveHash(href);
+        } else {
+            window.location.hash = href.replace('#', '');
+        }
+    };
 
     return (
         <nav className="bg-white shadow-sm sticky top-0 z-50 border-b border-neutral-200 w-full">
@@ -62,8 +95,10 @@ export default function Navbar({ dictionary, currentLang }: NavbarProps) {
                                     <Link
                                         key={item.href}
                                         href={item.href}
+                                        scroll={false}
+                                        onClick={(event) => handleNavClick(event, item.href)}
                                         className={`text-sm lg:text-base font-medium transition-colors ${
-                                            pathname === item.href
+                                            activeHash === item.href
                                                 ? 'text-primary-600 border-b-2 border-primary-600 pb-1'
                                                 : 'text-neutral-700 hover:text-primary-600'
                                         }`}
@@ -97,7 +132,9 @@ export default function Navbar({ dictionary, currentLang }: NavbarProps) {
                             <LanguageSwitcher currentLang={currentLang} />
                             {/* Primary CTA Button */}
                             <Link
-                                href={`/${currentLang}/contact`}
+                                href="#contact"
+                                scroll={false}
+                                onClick={(event) => handleNavClick(event, '#contact')}
                                 className="bg-accent-500 hover:bg-accent-600 px-5 py-2 text-white rounded-lg font-medium text-sm lg:text-base transition transform hover:scale-105 shadow-sm whitespace-nowrap"
                             >
                                 {dictionary.buttonBooking}
@@ -126,12 +163,13 @@ export default function Navbar({ dictionary, currentLang }: NavbarProps) {
                             <Link
                                 key={item.href}
                                 href={item.href}
+                                scroll={false}
                                 className={`block px-3 py-2 text-base font-medium rounded-md ${
-                                    pathname === item.href
+                                    activeHash === item.href
                                         ? 'bg-primary-50 text-primary-700'
                                         : 'text-neutral-700 hover:bg-neutral-50'
                                 }`}
-                                onClick={() => setIsOpen(false)}
+                                onClick={(event) => handleNavClick(event, item.href)}
                             >
                                 {item.label}
                             </Link>
@@ -161,9 +199,10 @@ export default function Navbar({ dictionary, currentLang }: NavbarProps) {
                                 <LanguageSwitcher currentLang={currentLang}/>
                             </div>
                             <Link
-                                href={`/${currentLang}/contact`}
+                                href="#contact"
+                                scroll={false}
                                 className="w-full block bg-accent-500 hover:bg-accent-600 text-white text-center py-3 rounded-md font-medium transition"
-                                onClick={() => setIsOpen(false)}
+                                onClick={(event) => handleNavClick(event, '#contact')}
                             >
                                 Book Free Consultation
                             </Link>

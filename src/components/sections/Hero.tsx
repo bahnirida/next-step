@@ -4,6 +4,7 @@
 import Link from 'next/link';
 import { Earth } from 'lucide-react';
 import Image from 'next/image'; // For optimized images
+import type { MouseEvent as ReactMouseEvent } from 'react';
 
 interface HeroProps {
     dictionary?: {
@@ -32,8 +33,23 @@ export default function Hero({ dictionary, currentLang = 'en' }: HeroProps) {
 
     const subtitleLines = t.subtitle.split('\n');
 
+    const handleContactClick = (event: ReactMouseEvent<HTMLAnchorElement>) => {
+        event.preventDefault();
+
+        if (typeof document === 'undefined' || typeof window === 'undefined') {
+            return;
+        }
+
+        const target = document.querySelector<HTMLElement>('#contact');
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            window.history.replaceState(null, '', '#contact');
+        }
+    };
+
     return (
         <section
+            id="home"
             className="relative bg-cover bg-center bg-no-repeat h-screen md:h-[90vh] flex items-center justify-center overflow-hidden">
             {/* Background Image */}
             <div className="absolute inset-0">
@@ -92,7 +108,9 @@ export default function Hero({ dictionary, currentLang = 'en' }: HeroProps) {
                     {/* CTA Buttons — LEFT ALIGNED */}
                     <div className="flex flex-col sm:flex-row gap-4 mb-8">
                         <Link
-                            href={`/${currentLang}/contact`}
+                            href="#contact"
+                            scroll={false}
+                            onClick={handleContactClick}
                             className="bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
                         >
                             {t.cta}

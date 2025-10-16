@@ -15,6 +15,8 @@ interface ContactSectionProps {
             namePlaceholder: string;
             emailLabel: string;
             emailPlaceholder: string;
+            numberLabel: string;
+            numberPlaceholder: string;
             messageLabel: string;
             messagePlaceholder: string;
             submitButton: string;
@@ -42,6 +44,7 @@ export default function ContactSection({ dictionary, currentLang }: ContactSecti
     const [formData, setFormData] = useState({
         name: '',
         email: '',
+        phonenumber:'',
         message: '',
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -62,12 +65,12 @@ export default function ContactSection({ dictionary, currentLang }: ContactSecti
         setTimeout(() => {
             setSubmitStatus('success');
             setIsSubmitting(false);
-            setFormData({ name: '', email: '', message: '' });
+            setFormData({ name: '', email: '', message: '',phonenumber: ''});
         }, 1500);
     };
 
     return (
-        <section className="py-24 bg-gradient-to-br from-primary-50 to-secondary-50">
+        <section id="contact" className="py-24 bg-gradient-to-br from-primary-50 to-secondary-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
                 <div className="text-center mb-16">
@@ -120,7 +123,21 @@ export default function ContactSection({ dictionary, currentLang }: ContactSecti
                                     placeholder={dictionary.form.emailPlaceholder}
                                 />
                             </div>
-
+                            <div>
+                                <label htmlFor="number" className="block text-sm font-medium text-neutral-700 mb-2">
+                                    {dictionary.form.numberLabel}
+                                </label>
+                                <input
+                                    type="text"
+                                    id="number"
+                                    name="number"
+                                    value={formData.phonenumber}
+                                    onChange={handleChange}
+                                    required
+                                    className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                                    placeholder={dictionary.form.numberPlaceholder}
+                                />
+                            </div>
                             <div>
                                 <label htmlFor="message" className="block text-sm font-medium text-neutral-700 mb-2">
                                     {dictionary.form.messageLabel}
@@ -145,7 +162,7 @@ export default function ContactSection({ dictionary, currentLang }: ContactSecti
                                 {isSubmitting ? (
                                     <span className="animate-spin mr-2">⏳</span>
                                 ) : (
-                                    <Send className="w-5 h-5 mr-2" />
+                                    <Send className="w-5 h-5 mr-2"/>
                                 )}
                                 {dictionary.form.submitButton}
                             </button>
@@ -161,7 +178,7 @@ export default function ContactSection({ dictionary, currentLang }: ContactSecti
 
                             <div className="space-y-6">
                                 <div className="flex items-start">
-                                    <Phone className="w-6 h-6 text-primary-600 mt-1 mr-4 flex-shrink-0" />
+                                    <Phone className="w-6 h-6 text-primary-600 mt-1 mr-4 flex-shrink-0"/>
                                     <div>
                                         <h4 className="font-medium text-neutral-900">{dictionary.info.phoneTitle}</h4>
                                         <p className="text-neutral-700">{dictionary.info.phone}</p>

@@ -64,7 +64,7 @@ export default function CountriesShowcase({ dictionary, currentLang }: Countries
     );
 
     return (
-        <section className="relative py-24 bg-gradient-to-br from-primary-50 to-secondary-50 overflow-hidden">
+        <section id="countries" className="relative py-24 bg-gradient-to-br from-primary-50 to-secondary-50 overflow-hidden">
             <div className="absolute top-3 right-0 hidden md:block ">
                 <Image
                     src="/illustrations/flightLignes-9.svg"

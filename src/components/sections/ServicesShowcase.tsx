@@ -42,7 +42,7 @@ export default function ServicesShowcase({ dictionary, currentLang }: ServicesSh
     };
 
     return (
-        <section className="relative py-24 bg-white">
+        <section id="services" className="relative py-24 bg-white">
             <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
                 <div className="absolute top-3 left-3 hidden md:block ">
