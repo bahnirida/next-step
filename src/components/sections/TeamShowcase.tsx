@@ -31,11 +31,11 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
     { name: 'Khilola Alimjanova', role: 'Founder & Operations Lead (Latvia)', image: '/members/khilola.png' },
-    { name: 'Mouhssine Tissafi', role: 'Business Developer', image: '/members/mouhssine.png' },
-    { name: 'Shehan Senarathne', role: 'Student Relations Manager', image: '/members/shehan.png' },
+    { name: 'Mouhssine Jaouhari Tissafi', role: 'Co-founder & Head of product', image: '/members/mouhssine.png' },
+    { name: 'Shehan Senarathne', role: 'Business developer', image: '/members/shehan.png' },
     { name: 'Spiridonova Tuiara', role: 'Marketing & Social Media Lead', image: '/members/spiridonova.png' },
-    { name: 'Chamara Kelum', role: 'Regional Coordinator (South Asia)', image: '/members/chamara.png' },
-    { name: 'Sanil Basrani', role: 'Product Manager', image: '/members/sanil.png' },
+    { name: 'Chamara Kelum', role: 'Partnerships & Student Success Lead', image: '/members/chamara.png' },
+    { name: 'Sanil Basrani', role: 'Regional Coordinator (South Asia)', image: '/members/sanil.png' },
 ];
 
 export default function TeamShowcase({ dictionary, currentLang }: TeamShowcaseProps) {

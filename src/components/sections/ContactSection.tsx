@@ -59,14 +59,45 @@ export default function ContactSection({ dictionary, currentLang }: ContactSecti
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        setSubmitStatus('idle');
         setIsSubmitting(true);
 
-        // Simulate API call
-        setTimeout(() => {
-            setSubmitStatus('success');
+        const scriptUrl =  process.env.URL_SCRIPT_SHEET;
+        console.log("this the script Url :" + scriptUrl)
+        if (!scriptUrl) {
+            console.error('Missing Apps Script URL. Set URL_SCRIPT_SHEET.');
+            setSubmitStatus('error');
             setIsSubmitting(false);
-            setFormData({ name: '', email: '', message: '',phonenumber: ''});
-        }, 1500);
+            if (typeof window !== 'undefined') {
+                window.alert('Configuration error: unable to submit right now.');
+            }
+            return;
+        }
+
+        try {
+            const response = await fetch(scriptUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+                mode: "no-cors",
+            });
+            console.log(response);
+
+            if (!response.ok) {
+                throw new Error(`Request failed with status ${response.status}`);
+            }
+
+            setSubmitStatus('success');
+            setFormData({ name: '', email: '', phonenumber: '', message: '' });
+        } catch (error) {
+            console.error('Error submitting contact form', error);
+            setSubmitStatus('error');
+            if (typeof window !== 'undefined') {
+                console.log('There was a problem submitting your message. Please try again.');
+            }
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -124,13 +155,13 @@ export default function ContactSection({ dictionary, currentLang }: ContactSecti
                                 />
                             </div>
                             <div>
-                                <label htmlFor="number" className="block text-sm font-medium text-neutral-700 mb-2">
+                                <label htmlFor="phonenumber" className="block text-sm font-medium text-neutral-700 mb-2">
                                     {dictionary.form.numberLabel}
                                 </label>
                                 <input
                                     type="text"
-                                    id="number"
-                                    name="number"
+                                    id="phonenumber"
+                                    name="phonenumber"
                                     value={formData.phonenumber}
                                     onChange={handleChange}
                                     required
