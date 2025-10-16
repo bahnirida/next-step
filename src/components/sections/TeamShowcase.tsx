@@ -1,26 +1,15 @@
 // src/components/sections/TeamShowcase.tsx
 'use client';
 
+import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-
-interface TeamMember {
-    id: number;
-    name: string;
-    role: string;
-    bio: string;
-    photo: string; // path to photo
-    social?: {
-        linkedin?: string;
-        twitter?: string;
-    };
-}
 
 interface TeamShowcaseProps {
     dictionary: {
         title: string;
         subtitle: string;
-        team: TeamMember[];
+        team: unknown[];
         stats: {
             students: string;
             successRate: string;
@@ -34,10 +23,90 @@ interface TeamShowcaseProps {
     currentLang: string;
 }
 
+interface TeamMember {
+    name: string;
+    role: string;
+    image: string;
+}
+
+const teamMembers: TeamMember[] = [
+    { name: 'Khilola Alimjanova', role: 'Founder & Operations Lead (Latvia)', image: '/members/khilola.png' },
+    { name: 'Mouhssine Tissafi', role: 'Business Developer', image: '/members/mouhssine.png' },
+    { name: 'Shehan Senarathne', role: 'Student Relations Manager', image: '/members/shehan.png' },
+    { name: 'Spiridonova Tuiara', role: 'Marketing & Social Media Lead', image: '/members/spiridonova.png' },
+    { name: 'Chamara Kelum', role: 'Regional Coordinator (South Asia)', image: '/members/chamara.png' },
+    { name: 'Sanil Basrani', role: 'Product Manager', image: '/members/sanil.png' },
+];
+
 export default function TeamShowcase({ dictionary, currentLang }: TeamShowcaseProps) {
+    const [visibleCards, setVisibleCards] = useState(1);
+    const [currentIndex, setCurrentIndex] = useState(visibleCards);
+    const [isTransitioning, setIsTransitioning] = useState(false);
+
+    useEffect(() => {
+        const updateVisibleCards = () => {
+            const width = window.innerWidth;
+            const nextVisibleCards = width < 640 ? 1 : width < 1024 ? 2 : 3;
+            setVisibleCards((prev) => (prev === nextVisibleCards ? prev : nextVisibleCards));
+        };
+
+        updateVisibleCards();
+        window.addEventListener('resize', updateVisibleCards);
+        return () => window.removeEventListener('resize', updateVisibleCards);
+    }, []);
+
+    useEffect(() => {
+        setIsTransitioning(false);
+        setCurrentIndex(visibleCards);
+    }, [visibleCards]);
+
+    const extendedMembers = useMemo(() => {
+        if (teamMembers.length === 0) {
+            return [];
+        }
+
+        const prefix = teamMembers.slice(-visibleCards);
+        const suffix = teamMembers.slice(0, visibleCards);
+        return [...prefix, ...teamMembers, ...suffix];
+    }, [visibleCards]);
+
+    const totalMembers = teamMembers.length;
+    const maxIndex = visibleCards + totalMembers - 1;
+    const slideWidth = 100 / visibleCards;
+
+    const nextSlide = () => {
+        if (!totalMembers) {
+            return;
+        }
+        setIsTransitioning(true);
+        setCurrentIndex((prev) => prev + 1);
+    };
+
+    const prevSlide = () => {
+        if (!totalMembers) {
+            return;
+        }
+        setIsTransitioning(true);
+        setCurrentIndex((prev) => prev - 1);
+    };
+
+    const handleTransitionEnd = () => {
+        if (!totalMembers) {
+            return;
+        }
+
+        if (currentIndex > maxIndex) {
+            setIsTransitioning(false);
+            setCurrentIndex(visibleCards);
+        } else if (currentIndex < visibleCards) {
+            setIsTransitioning(false);
+            setCurrentIndex(maxIndex);
+        }
+    };
+
     return (
         <section id="about" className="relative pt-24 bg-white">
-            <div className="absolute top-3 left-3 hidden md:block ">
+            <div className="absolute top-3 left-3 hidden md:block">
                 <Image
                     src="/illustrations/flightLignes-10.svg"
                     alt="Flight path from home to destination"
@@ -47,7 +116,6 @@ export default function TeamShowcase({ dictionary, currentLang }: TeamShowcasePr
                 />
             </div>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Section Header */}
                 <div className="text-center mb-16">
                     <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 mb-6">
                         {dictionary.title}
@@ -57,45 +125,69 @@ export default function TeamShowcase({ dictionary, currentLang }: TeamShowcasePr
                     </p>
                 </div>
 
-                {/* Team Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-5">
-                    {dictionary.team.map((member) => (
+                <div className="relative">
+                    <button
+                        type="button"
+                        onClick={prevSlide}
+                        aria-label="Previous team members"
+                        className="absolute left-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/80 px-3 py-2 text-2xl text-neutral-700 shadow-lg transition hover:bg-white"
+                    >
+                        ‹
+                    </button>
+                    <div className="overflow-hidden p-10 sm:p-12">
                         <div
-                            key={member.id}
-                            className="bg-neutral-50 rounded-xl p-8 text-center hover:shadow-lg transition-shadow duration-300"
+                            className="flex items-stretch"
+                            style={{
+                                transform: `translateX(-${currentIndex * slideWidth}%)`,
+                                transition: isTransitioning ? 'transform 500ms ease' : 'none',
+                            }}
+                            onTransitionEnd={handleTransitionEnd}
                         >
-                            <div className="mb-6">
+                            {extendedMembers.map((member, index) => (
                                 <div
-                                    className="relative mx-auto w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-md">
-                                    <Image
-                                        src={`/team/${member.photo}`}
-                                        alt={member.name}
-                                        fill
-                                        className="object-cover"
-                                        priority={false}
-                                    />
+                                    key={`${member.name}-${index}`}
+                                    className="px-4 shrink-0"
+                                    style={{ width: `${slideWidth}%` }}
+                                >
+                                    <article className="h-full rounded-3xl bg-white/60 p-8 text-center shadow-md ring-1 ring-black/5 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-xl">
+                                        <div className="mx-auto mb-6 h-32 w-32 overflow-hidden rounded-full border-4 border-white shadow-md">
+                                            <Image
+                                                src={member.image}
+                                                alt={member.name}
+                                                width={128}
+                                                height={128}
+                                                className="h-full w-full object-cover"
+                                            />
+                                        </div>
+                                        <h3 className="text-xl font-semibold text-neutral-900">
+                                            {member.name}
+                                        </h3>
+                                        <p className="mt-2 text-sm text-neutral-600">
+                                            {member.role}
+                                        </p>
+                                    </article>
                                 </div>
-                            </div>
-                            <h3 className="text-2xl font-bold text-neutral-900 mb-2">
-                                {member.name}
-                            </h3>
-                            <p className="text-primary-600 font-medium mb-4">
-                                {member.role}
-                            </p>
-                            <p className="text-neutral-700 mb-6 leading-relaxed">
-                                {member.bio}
-                            </p>
-                            <Link
-                                href={`/${currentLang}${dictionary.cta.link}`}
-                                className="inline-block bg-accent-500 hover:bg-accent-600 text-white font-bold py-3 px-6 rounded-lg text-sm transition-all duration-300 transform hover:scale-105"
-                            >
-                                {dictionary.cta.text}
-                            </Link>
+                            ))}
                         </div>
-                    ))}
+                    </div>
+                    <button
+                        type="button"
+                        onClick={nextSlide}
+                        aria-label="Next team members"
+                        className="absolute right-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/80 px-3 py-2 text-2xl text-neutral-700 shadow-lg transition hover:bg-white"
+                    >
+                        ›
+                    </button>
                 </div>
 
-
+                <div className="mt-12 text-center">
+                    <Link
+                        href={`/${currentLang}${dictionary.cta.link}`}
+                        className="inline-block rounded-xl bg-accent-500 px-8 py-3 text-sm font-semibold text-white transition duration-300 hover:scale-[1.02] hover:bg-accent-600"
+                    >
+                        {dictionary.cta.text}
+                    </Link>
+                </div>
             </div>
         </section>
     );
